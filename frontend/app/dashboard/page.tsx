@@ -80,7 +80,7 @@ export default function Dashboard() {
     setLoading(true); setOutput('');
     const token = localStorage.getItem('token');
     try {
-      const response = await fetch('http://localhost:8000/generate', {
+      const response = await fetch('https://creator-ai-toolkit-production.up.railway.app/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ tool: activeTool, inputs, token }),

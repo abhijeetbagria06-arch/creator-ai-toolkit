@@ -16,7 +16,7 @@ export default function Login() {
     try {
       const endpoint = isLogin ? '/login' : '/register';
       const body = isLogin ? { email, password } : { name, email, password };
-      const res = await fetch(`http://localhost:8000${endpoint}`, {
+      const res = await fetch(`https://creator-ai-toolkit-production.up.railway.app${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
